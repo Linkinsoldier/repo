@@ -85,7 +85,7 @@ def list_videos(resource, reliveOnly):
         thumb = video['teaser']['image']  # .replace('ran_app_1280x720', 'ran_app_512x288')
         desc = video['teaser']['image_alt'] or video['teaser']['title']
 
-        if 'False' in reliveOnly or 'Relive' in video['teaser']['title'] or 'Re-Live' in video['teaser']['title']:
+        if 'False' in reliveOnly or 'Relive' in video['teaser']['title'] or 'Re-Live' in video['teaser']['title'] or 'RELIVE' in video['teaser']['title']:
             gui.add_video(title, thumb, {'f': 'play', 'resource': resource},
                       {'Title': video['teaser']['title'], 'Plot': desc, 'Genre': 'Sport', 'Year': year},
                       duration_in_seconds, thumb, is_playable=playable)
